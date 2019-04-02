@@ -18,7 +18,15 @@
 	"Daily Journal Entry": {
 		"prefix": "daily",
 		"body": [
-			"hello world"
+			"## $CURRENT_DAY_NAME $CURRENT_MONTH_NAME $CURRENT_DATE $CURRENT_YEAR",
+			"---",
+			"",
+			"",
+			"**Description**: $1",
+			"",
+			"",
+			"**Tags**: $0",
+			"---"
 		],
 		"description": "Creates a daily journal entry"
 	}
