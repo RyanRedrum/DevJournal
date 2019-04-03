@@ -26,6 +26,7 @@
 			"",
 			"",
 			"**Tags**: $0",
+			"",
 			"---"
 		],
 		"description": "Creates a daily journal entry"
