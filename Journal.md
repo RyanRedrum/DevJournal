@@ -21,3 +21,21 @@ SELECT CONVERT(date, getdate())
 **Tags**: #resharper
 
 ---
+
+## Thursday April 04 2019
+---
+
+
+**Description**: Select exists directly as a bit https://stackoverflow.com/questions/2759756/is-it-possible-to-select-exists-directly-as-a-bit
+
+```sql
+SELECT CAST(
+   CASE WHEN EXISTS(SELECT * FROM theTable where theColumn like 'theValue%') THEN 1
+   ELSE 0
+   END
+AS BIT)
+```
+
+**Tags**: #tsql #exists
+
+---
