@@ -39,3 +39,30 @@ AS BIT)
 **Tags**: #tsql #exists
 
 ---
+
+## Monday April 08 2019
+---
+
+
+**Description**: Getting null default value from list of int https://stackoverflow.com/questions/1825304/return-null-for-firstordefault-on-empty-ienumerableint.
+
+```csharp
+int? nullableId = GetNonNullableInts().Cast<int?>().FirstOrDefault();
+```
+
+**Tags**: #csharp #nullable int
+
+---
+
+## Tuesday April 09 2019
+---
+
+
+**Description**: Android studio updates not running https://android.stackexchange.com/questions/55258/unable-to-install-system-images-for-the-android-sdk-failed-to-create-directory
+
+Needed to run Android Studio as administrator.  Duh.
+
+
+**Tags**: #AndroidStudio
+
+---
