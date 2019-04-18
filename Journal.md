@@ -66,3 +66,32 @@ Needed to run Android Studio as administrator.  Duh.
 **Tags**: #AndroidStudio
 
 ---
+
+## Monday April 15 2019
+---
+
+
+**Description**: Gzipping a string in c# http://gigi.nullneuron.net/gigilabs/compressing-strings-using-gzip-in-c/
+
+```c#
+string inputStr = "Hello world!";
+byte[] inputBytes = Encoding.UTF8.GetBytes(inputStr);
+
+using (var outputStream = new MemoryStream())
+{
+    using (var gZipStream = new GZipStream(outputStream, CompressionMode.Compress))
+        gZipStream.Write(inputBytes, 0, inputBytes.Length);
+
+    var outputBytes = outputStream.ToArray();
+
+    var outputStr = Encoding.UTF8.GetString(outputBytes);
+    Console.WriteLine(outputStr);
+
+    Console.ReadLine();
+}
+```
+
+
+**Tags**: #c# #gzip
+
+---
