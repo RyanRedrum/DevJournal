@@ -95,3 +95,14 @@ using (var outputStream = new MemoryStream())
 **Tags**: #c# #gzip
 
 ---
+
+## Friday April 19 2019
+---
+
+
+**Description**: Rewriting git history https://rtyley.github.io/bfg-repo-cleaner/
+
+
+**Tags**: #git
+
+---
