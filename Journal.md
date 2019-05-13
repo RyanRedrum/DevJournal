@@ -106,3 +106,18 @@ using (var outputStream = new MemoryStream())
 **Tags**: #git
 
 ---
+## Monday May 13 2019
+---
+
+
+**Description**: Fixing case sensitivity issue in git repo on Windows.  https://stackoverflow.com/questions/11183788/in-a-git-repository-how-to-properly-rename-a-directory/11183844
+
+```
+git mv casesensitive tmp
+git mv tmp CaseSensitive
+```
+
+
+**Tags**: #git #windows #case-sensitivity
+
+---
