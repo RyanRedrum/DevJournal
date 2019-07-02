@@ -137,3 +137,58 @@ Need to run cmd as admin.
 **Tags**: #git #hooks
 
 ---
+
+## Tuesday July 02 2019
+---
+
+
+**Description**: git pre-commit hook - prevents commit if the text "//NOCOMMIT" is present in any changes.
+
+```bash
+#!/bin/sh
+
+# (pre-commit or pre-push)
+# Fail if any matching words are present in the diff
+matches=$(git diff-index --patch HEAD | grep '^+' | grep -Pi '//NOCOMMIT')
+
+if [ ! -z "$matches" ]
+then
+	cat <<\EOT
+Error: Words from the blacklist were present in the diff:
+EOT
+	echo $matches
+	exit 1
+fi
+```
+
+**Tags**: #git #hooks #pre-commit
+
+---
+
+## Tuesday July 02 2019
+---
+
+
+**Description**: git pre-push hook - prevents push to remote if the text "//NOPUSH" is present.
+
+```bash
+#!/bin/sh
+
+# (pre-commit or pre-push)
+# Fail if any matching words are present in the diff
+
+matches=$(git diff-tree --patch HEAD | grep '^+' | grep -Pi '//NOPUSH')
+
+if [ ! -z "$matches" ]
+then
+	cat <<\EOT
+Error: Words from the blacklist were present in the diff:
+EOT
+	echo $matches
+	exit 1
+fi
+```
+
+**Tags**: #git #hooks #pre-push
+
+---
