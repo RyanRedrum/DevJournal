@@ -121,3 +121,19 @@ git mv tmp CaseSensitive
 **Tags**: #git #windows #case-sensitivity
 
 ---
+## Tuesday July 02 2019
+---
+
+
+**Description**: Setting up global git hooks on Windows.  https://github.com/git-for-windows/git/issues/1420
+
+```
+git config --global core.hooksPath "C:\Program Files\Git\hooks"
+```
+
+Need to run cmd as admin.
+
+
+**Tags**: #git #hooks
+
+---
